@@ -10,6 +10,7 @@
   --black: #000000;
   --veryDark: #212121;
   --blue: #2196f3;
+  --secondBlue: rgba(33, 150, 243, 0.9);
   --lightGray: #e5e5e5;
   --gray: #757575;
   --darkGray: #2f303a;
@@ -561,7 +562,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-
   background-color: var(--white);
 }
 .portfolio-item img {
@@ -620,4 +620,63 @@ footer.instagram:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop {
+}
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--white);
+  transform: translate(0%, 0%);
+
+  transition-duration: 1.5s;
+}
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 490px;
+  margin-top: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+
+  transition: transform 250ms ease;
+}
+.box:hover .overlay {
+  transform: translatey(0);
+}
+.overlay p {
+  color: var(--white);
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+.overlay-box {
+  width: 370px;
+  height: 294px;
+  padding-top: 49px;
+  padding-left: 29px;
+  background-color: var(--secondBlue);
+  padding-right: 45px;
 }
