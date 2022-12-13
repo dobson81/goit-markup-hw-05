@@ -649,7 +649,7 @@ footer.instagram:hover {
   justify-content: center;
   align-items: center;
 }
-.box {
+/* .box {
   position: relative;
   overflow: hidden;
 }
@@ -679,7 +679,7 @@ footer.instagram:hover {
   padding-left: 29px;
   background-color: var(--secondBlue);
   padding-right: 45px;
-}
+} */
 /* czym sie zajmujemy */
 .li-box {
   position: relative;
@@ -693,13 +693,7 @@ footer.instagram:hover {
   height: 70px;
   bottom: 4px;
 }
-.images-portfolio p {
-  color: var(--white);
-  font-size: 14px;
-  line-height: 1.17;
-  padding-top: 27px;
-  text-transform: uppercase;
-}
+
 /* .line {
   position: relative;
 } */
@@ -733,4 +727,13 @@ footer.instagram:hover {
 
   transform: translatey(100%);
   transition: transform 250ms ease;
+}
+.overlay-one p {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1.55;
+  padding-top: 49px;
+  padding-right: 45px;
+  padding-bottom: 49px;
+  padding-left: 24px;
 }
