@@ -240,7 +240,27 @@ body {
   width: 1200px;
   justify-content: space-between;
 }
+.li-box {
+  position: relative;
+}
 
+.box-box {
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  bottom: 4px;
+}
+.images-studio-top p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .team {
   background: var(--bright);
 }
@@ -627,14 +647,24 @@ footer.instagram:hover {
   pointer-events: none;
 }
 .backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
 }
 .modal {
   width: 528px;
   min-height: 581px;
   background-color: var(--white);
-  transform: translate(0%, 0%);
+
   position: absolute;
   transition-duration: 1.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.backdrop.is-hidden .modal {
+  transform: rotate(-20deg);
 }
 .close-btn {
   width: 30px;
@@ -660,7 +690,6 @@ footer.instagram:hover {
   width: 100%;
   height: 100%;
   transform: translatey(100%);
-
   transition: transform 250ms ease;
 }
 .box:hover .overlay {
@@ -669,7 +698,6 @@ footer.instagram:hover {
 .overlay p {
   color: var(--white);
   font-size: 18px;
-
   line-height: 1.55;
 }
 .overlay-box {
@@ -681,18 +709,6 @@ footer.instagram:hover {
   padding-right: 45px;
 } */
 /* czym sie zajmujemy */
-.li-box {
-  position: relative;
-}
-
-.box-box {
-  background-color: rgba(47, 48, 58, 0.8);
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  height: 70px;
-  bottom: 4px;
-}
 
 /* .line {
   position: relative;
