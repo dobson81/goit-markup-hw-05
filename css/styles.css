@@ -18,6 +18,8 @@
   --GreyGray: #afb1b8;
   --gradientColor: rgba(47, 48, 58, 0.4);
   --littleWhite: #eeeeee;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --transitionTime: 250ms;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -86,9 +88,11 @@ body {
 }
 .menu > li > a:hover {
   color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .menu > li > a:focus {
   color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .contacts {
@@ -115,16 +119,28 @@ body {
 } */
 .contacts a:focus {
   color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .mail-icon-nav:hover {
   color: var(--blue);
   fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
+}
+.mail-icon-nav:focus {
+  color: var(--blue);
+  fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .tel-icon-nav:hover {
   color: var(--blue);
   fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
-
+.tel-icon-nav:focus {
+  color: var(--blue);
+  fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
+}
 .envelope {
   margin-right: 10px;
   vertical-align: middle;
@@ -184,9 +200,11 @@ body {
 }
 .button:hover {
   cursor: pointer;
+  transition: var(--transitionTime) var(--cubic);
 }
 .button:focus {
   background-color: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .description-list {
@@ -362,12 +380,20 @@ body {
   justify-content: center;
 }
 
-.circle:hover {
-  background-color: #2196f3;
+.circle:hover,
+.circle:focus {
+  background-color: var(--blue);
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
+}
+.circle:focus {
+  background-color: var(--blue);
+  fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 .circle:hover svg {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .linkedin-icon-john {
@@ -378,6 +404,7 @@ body {
 }
 .linkedin-icon-john:hover {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 .facebook-icon-john {
   /*zmienic nazwe klasy*/
@@ -388,6 +415,7 @@ body {
 }
 .facebook-icon-john:hover {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 .twitter-icon-john {
   fill: var(--GreyGray);
@@ -397,6 +425,7 @@ body {
 }
 .twitter-icon-john:hover {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 .instagram-icon-john {
   fill: var(--GreyGray);
@@ -406,6 +435,7 @@ body {
 }
 .instagram-icon-john:hover {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .ourClients {
@@ -436,9 +466,11 @@ body {
 }
 .logo-icons:hover {
   fill: var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .client:hover {
   border: 1px solid var(--blue);
+  transition: var(--transitionTime) var(--cubic);
 }
 .footer {
   background: var(--darkGray);
@@ -538,6 +570,7 @@ body {
 }
 .footer-circle:hover {
   background-color: var(--blue);
+  transition-duration: 250ms;
 }
 .social-icons-footer {
   width: 44px;
@@ -564,17 +597,16 @@ body {
   line-height: 1.6;
   letter-spacing: 0.03em;
 }
-.button-item:hover {
+.button-item:hover,
+.button-item:focus {
+  color: var(--white);
   cursor: pointer;
   background-color: var(--blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: var(--transitionTime) var(--cubic);
 }
-.button-item:focus {
-  background-color: var(--blue);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    /*dlaczego cień nie reaguje*/ 0px 2px 2px rgba(0, 0, 0, 0.1);
-}
+
 .images-portfolio {
   list-style-type: none;
   margin-top: 56px;
@@ -590,6 +622,7 @@ body {
 .portfolio-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .images-portfolio h3 {
@@ -633,6 +666,7 @@ body {
 
 footer.instagram:hover {
   fill: var(--white);
+  transition: var(--transitionTime) var(--cubic);
 }
 
 .bottom-icons {
@@ -724,7 +758,7 @@ footer.instagram:hover {
 }
 /* proba */
 .box-one {
-  width: 370;
+  width: 370px;
   height: 294px;
 
   position: relative;
